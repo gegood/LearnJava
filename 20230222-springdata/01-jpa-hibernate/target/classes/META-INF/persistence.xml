@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <!--
+    需要配置 persistence-unit 节点
+    持久化单元：
+        name：持久化单元名称
+        transaction-type: 事务管理的方式
+            JTA ： 分布式事务管理
+            RESOURCE_LOCAL ：本地事务管理
+
+    如果要替换 Hibernate，可以在下方再写一个 persistence-unit 节点
+
+    -->
+
+    <persistence-unit name="hibernateJPA" transaction-type="RESOURCE_LOCAL">
+        <!-- JPA 的实现方式 -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- 需要进行 ORM 的 pojo 类 -->
+        <class>com.tyy.pojo.Customer</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/learnjdbc?autoReconnect=true&amp;characterEncoding=utf8&amp;useSSL=false"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="123456"/>
+
+            <!-- hibernate 方言-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <!-- 打印sql语句，默认是false-->
+            <property name="hibernate.show_sql" value="true"/>
+
+            <!-- 格式化sql，默认是false-->
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- 表生成策略，默认none，不生成
+                    update，如果没有表会创建
+                    create，创建-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+
+        </properties>
+
+    </persistence-unit>
+</persistence>

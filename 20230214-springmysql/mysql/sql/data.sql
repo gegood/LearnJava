@@ -1,0 +1,1 @@
+insert into learnjdbc.new_name(name) value('xiaowu')
