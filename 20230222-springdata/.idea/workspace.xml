@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04b6b4be-1448-481c-9824-3faee2adf4f7" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Z19912528419\ProgramFiles\maven387\mvn_repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../ProgramFiles/maven387/apache-maven-3.8.7" />
+        <option name="userSettingsFile" value="D:\Z19912528419\ProgramFiles\maven387\apache-maven-3.8.7\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2M5S3sdTDdbmL7XRwAz7stmoFTY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/02-springdata-jpa/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Z19912528419\worksp\idea_w\20230222-springdata\02-springdata-jpa\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tyy.pojo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SpringdataJpaTest.read">
+    <configuration name="HibernateTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-jpa-hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy.pojo" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.pojo.HibernateTest" />
+      <option name="METHOD_NAME" value="read" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JPATest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-jpa-hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy.pojo" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.pojo.JPATest" />
+      <option name="METHOD_NAME" value="read" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringdataJpaTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-springdata-jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy.test" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.test.SpringdataJpaTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringdataJpaTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-springdata-jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy.test" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.test.SpringdataJpaTest" />
+      <option name="METHOD_NAME" value="read" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringdataJpaTest.readCustomerByNameSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="02-springdata-jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy.test" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.test.SpringdataJpaTest" />
+      <option name="METHOD_NAME" value="readCustomerByNameSQL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringdataJpaTest.read" />
+        <item itemvalue="JUnit.SpringdataJpaTest.create" />
+        <item itemvalue="JUnit.HibernateTest.read" />
+        <item itemvalue="JUnit.JPATest.read" />
+        <item itemvalue="JUnit.SpringdataJpaTest.readCustomerByNameSQL" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04b6b4be-1448-481c-9824-3faee2adf4f7" name="Changes" comment="" />
+      <created>1677055755244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677055755244</updated>
+      <workItem from="1677055756407" duration="41352000" />
+      <workItem from="1678089416783" duration="51000" />
+      <workItem from="1678152546596" duration="1569000" />
+      <workItem from="1678158174851" duration="233000" />
+      <workItem from="1678242511321" duration="15000" />
+      <workItem from="1678242912175" duration="1338000" />
+      <workItem from="1678245501458" duration="9068000" />
+      <workItem from="1678365175774" duration="2239000" />
+      <workItem from="1678870735338" duration="713000" />
+      <workItem from="1679293384588" duration="278000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="22220e84-c9f6-4172-927c-b8247acd6dd5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Z19912528419\ProgramFiles\maven387\mvn_repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../ProgramFiles/maven387/apache-maven-3.8.7" />
+        <option name="userSettingsFile" value="D:\Z19912528419\ProgramFiles\maven387\apache-maven-3.8.7\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LowrErHWr8vdOWqPaTG79LIDwf" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.PeopleTest.testa">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tyy.hibernate.Main" />
+      <module name="20230216-hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PeopleTest.testa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="20230216-hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tyy" />
+      <option name="MAIN_CLASS_NAME" value="com.tyy.PeopleTest" />
+      <option name="METHOD_NAME" value="testa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PeopleTest.testa" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22220e84-c9f6-4172-927c-b8247acd6dd5" name="Changes" comment="" />
+      <created>1676550941337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676550941337</updated>
+      <workItem from="1676550942762" duration="12824000" />
+      <workItem from="1676861919600" duration="1195000" />
+      <workItem from="1677038046525" duration="4841000" />
+      <workItem from="1677057232902" duration="34000" />
+      <workItem from="1677057284297" duration="11000" />
+      <workItem from="1677058410021" duration="478000" />
+      <workItem from="1677642106040" duration="612000" />
+      <workItem from="1678089474843" duration="15000" />
+      <workItem from="1678089649925" duration="10000" />
+      <workItem from="1679623027023" duration="226000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
