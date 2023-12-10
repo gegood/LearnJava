@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+    <springProperty scope="context" name="logPath" source="logging.file.path"/>
+    <springProperty scope="context" name="maxFileSize" source="logging.maxFileSize"/>
+    <springProperty scope="context" name="maxHistory" source="logging.maxHistory"/>
+    <springProperty scope="context" name="totalSizeCap" source="logging.totalSizeCap"/>
+
+    <!-- 文件输出格式 -->
+    <property name="PATTERN"
+              value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) | %-5level [%thread]  opSeq[%X{OpSeq}] %c:%L -> %msg%n"/>
+    <!-- 联机test文件路径 -->
+    <!--    <property scope="system" name="LOG_PATH" value="${LOG_PATH:-./logs}"/>-->
+    <property name="TEST_FILE_PATH" value="${logPath}"/>
+    <!-- RELESE文件路径 -->
+    <property name="RELESE_FILE_PATH"  value="${logPath}"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+
+    <!-- 默认环境 -->
+    <springProfile name="default">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+    <!-- 开发环境 -->
+    <springProfile name="dev">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="DEV_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${TEST_FILE_PATH}/${APP_NAME}.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${TEST_FILE_PATH}/${APP_NAME}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+                <maxHistory>${maxHistory}</maxHistory>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="DEV_FILE"/>
+        </root>
+    </springProfile>
+
+    <!-- 本地环境 -->
+    <springProfile name="local">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="TEST_FILE"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <file>${TEST_FILE_PATH}/${APP_NAME}.log</file>
+            <rollingPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${TEST_FILE_PATH}/${APP_NAME}.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${TEST_FILE_PATH}/${APP_NAME}_error.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${TEST_FILE_PATH}/${APP_NAME}_error.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter"><!-- 只打印错误日志 -->
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+        </appender>
+
+        <root level="info">
+            <!--            <appender-ref ref="CONSOLE"/>-->
+            <appender-ref ref="TEST_FILE"/>
+            <appender-ref ref="ERROR_FILE"/>
+        </root>
+    </springProfile>
+    <!-- 测试环境 -->
+    <springProfile name="test">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="TEST_FILE"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <file>${TEST_FILE_PATH}/${APP_NAME}.log</file>
+            <rollingPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${TEST_FILE_PATH}/${APP_NAME}.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${TEST_FILE_PATH}/${APP_NAME}_error.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${TEST_FILE_PATH}/${APP_NAME}_error.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter"><!-- 只打印错误日志 -->
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+        </appender>
+
+        <root level="info">
+            <!--            <appender-ref ref="CONSOLE"/>-->
+            <appender-ref ref="TEST_FILE"/>
+            <appender-ref ref="ERROR_FILE"/>
+        </root>
+    </springProfile>
+
+    <!-- 生产环境 -->
+    <springProfile name="release">
+        <appender name="RELESE_FILE"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <file>${RELESE_FILE_PATH}/${APP_NAME}.log</file>
+            <rollingPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${RELESE_FILE_PATH}/${APP_NAME}.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${RELESE_FILE_PATH}/${APP_NAME}_error.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${RELESE_FILE_PATH}/${APP_NAME}_error.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>${maxFileSize}</maxFileSize>
+                <maxHistory>${maxHistory}</maxHistory>
+                <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                <!--重启清理日志文件-->
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter"><!-- 只打印错误日志 -->
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+        </appender>
+
+
+        <root level="info">
+            <appender-ref ref="ERROR_FILE"/>
+            <appender-ref ref="RELESE_FILE"/>
+        </root>
+    </springProfile>
+</configuration>

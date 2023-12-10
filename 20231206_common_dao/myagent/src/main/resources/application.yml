@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+scheduler:
+  thread-count: 2
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.example.myagent: INFO
+  file:
+    path: d:\\wuzhihao
+
+heartbeat:
+  enabled: true
+  client-name: myFeignClient
+  console-url: http://127.0.0.1:8080/
+  check-interval: 2
+
+feign:
+  circuitbreaker:
+    enabled: true
+  httpclient:
+    enabled: true
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+        decode404: true
+        connectTimeout: 1000
+        readTimeout: 6000
+

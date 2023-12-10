@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update #自动生成数据库表（关键，在打上@Entity的类直接生成数据库表）
+    show-sql: false #jpa配置：在控制台显示Hibernate的sql(可选)
+  thymeleaf:
+    cache: false #其他配置：关闭Thymeleaf 的缓存
+  datasource:
+    url: jdbc:mysql://localhost:3306/0817_my_agent?serverTimezone=Asia/Shanghai  #mysql数据库连接配置（非常重要）
+    username: root          #数据库用户名
+    password: Wit!!06096699 #数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver #mysql数据库驱动程序（重要）
+
+logging:
+  file:
+    path: d:\\wuzhihao

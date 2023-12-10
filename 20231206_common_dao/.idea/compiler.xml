@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myagent" />
+      </profile>
+      <profile name="Annotation profile for 20231206_common_dao" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/mapstruct/mapstruct-processor/1.5.2.Final/mapstruct-processor-1.5.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/hibernate/hibernate-jpamodelgen/5.6.15.Final/hibernate-jpamodelgen-5.6.15.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar" />
+          <entry name="$PROJECT_DIR$/../../../ProgramFiles/maven387/mvn_repo/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar" />
+        </processorPath>
+        <module name="common" />
+        <module name="myconsole" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="myagent" options="-parameters" />
+      <module name="myconsole" options="-parameters" />
+    </option>
+  </component>
+</project>
